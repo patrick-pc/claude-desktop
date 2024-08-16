@@ -1,11 +1,16 @@
+"use client";
+
+import Footer from "@/components/footer";
 import Link from "next/link";
 import moment from "moment";
 import Nav from "@/components/nav";
-import Footer from "@/components/footer";
+import * as seline from "@seline-analytics/web";
 
 const downloadAppleSilicon =
   process.env.NEXT_PUBLIC_DOWNLOAD_APPLE_SILICON || "";
 const downloadIntel = process.env.NEXT_PUBLIC_DOWNLOAD_INTEL || "";
+const trackAppleSilicon = "selected_apple_silicon";
+const trackIntel = "selected_intel";
 
 export default function Home() {
   return (
@@ -27,6 +32,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Link
               href={downloadAppleSilicon}
+              onClick={() => seline.track(trackAppleSilicon)}
               className="bg-[#141413] hover:bg-[#525251] text-[#FAFAF8] py-4 px-8 rounded-xl"
               rel="noopener noreferrer"
             >
@@ -35,6 +41,7 @@ export default function Home() {
 
             <Link
               href={downloadIntel}
+              onClick={() => seline.track(trackIntel)}
               className="bg-[#FAFAF8] border border-[#141413] hover:text-[#828179] hover:border-[#828179] py-4 px-8 rounded-xl"
               rel="noopener noreferrer"
             >
@@ -115,6 +122,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Link
               href={downloadAppleSilicon}
+              onClick={() => seline.track(trackAppleSilicon)}
               className="bg-[#FAFAF8] hover:bg-[#FAFAF8]/80 text-[#141413] py-4 px-8 rounded-xl"
               rel="noopener noreferrer"
             >
@@ -123,6 +131,7 @@ export default function Home() {
 
             <Link
               href={downloadIntel}
+              onClick={() => seline.track(trackIntel)}
               className="bg-[#141413] border border-[#FAFAF8] hover:text-[#FAFAF8]/80 hover:border-[#FAFAF8]/80 py-4 px-8 rounded-xl"
               rel="noopener noreferrer"
             >

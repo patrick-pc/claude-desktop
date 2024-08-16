@@ -127,6 +127,11 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@seline-analytics/web@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@seline-analytics/web/-/web-0.0.14.tgz#2844753539f10bcf602f3dd35a37b0d6f809389f"
+  integrity sha512-1TaoKIPd5c7MxjdCp1MqCrvSTJRo4v/rJIhPlwaCRpBZdZv3lRmH8DFtPHAxosxfmh55YJIYYfI/0Q0wFqPtpg==
+
 "@swc/counter@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@swc/counter/-/counter-0.1.3.tgz#cc7463bd02949611c6329596fccd2b0ec782b0e9"

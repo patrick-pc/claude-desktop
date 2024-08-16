@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
-
 import { fontMono, fontSans, fontSerif } from "@/lib/fonts";
+import { SelineAnalytics } from "@/components/seline-analytics";
+import { siteConfig } from "@/config/site";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
