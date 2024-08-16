@@ -3,12 +3,16 @@ import moment from "moment";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 
+const downloadAppleSilicon =
+  process.env.NEXT_PUBLIC_DOWNLOAD_APPLE_SILICON || "";
+const downloadIntel = process.env.NEXT_PUBLIC_DOWNLOAD_INTEL || "";
+
 export default function Home() {
   return (
     <>
       <Nav />
 
-      <main className="flex min-h-screen flex-col items-center justify-between my-20 px-6 gap-4">
+      <main className="flex min-h-screen flex-col items-center justify-between py-20 px-6">
         <section className="flex flex-col items-center justify-center gap-4 text-center tracking-wider">
           <h1 className="text-5xl md:text-7xl font-medium font-serif">
             Claude on your desktop
@@ -19,31 +23,33 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="flex flex-col md:flex-row items-center justify-center gap-4 mt-4 tracking-wider">
-          <Link
-            href="https://github.com/patrick-pc/castgpt/releases/download/v0.4.5/Claude-0.4.5-arm64-mac.zip"
-            className="bg-[#141413] hover:bg-[#525251] text-[#FAFAF8] py-4 px-8 rounded-xl"
-            rel="noopener noreferrer"
-          >
-            Download for Apple Silicon
-          </Link>
+        <section className="flex flex-col items-center justify-center gap-6 mt-10 tracking-wider">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <Link
+              href={downloadAppleSilicon}
+              className="bg-[#141413] hover:bg-[#525251] text-[#FAFAF8] py-4 px-8 rounded-xl"
+              rel="noopener noreferrer"
+            >
+              Download for Apple Silicon
+            </Link>
 
-          <Link
-            href="https://github.com/patrick-pc/castgpt/releases/download/v0.4.5/Claude-0.4.5-mac.zip"
-            className="bg-[#FAFAF8] border border-[#141413] hover:text-[#828179] hover:border-[#828179] py-4 px-8 rounded-xl"
-            rel="noopener noreferrer"
-          >
-            Download for Intel
-          </Link>
+            <Link
+              href={downloadIntel}
+              className="bg-[#FAFAF8] border border-[#141413] hover:text-[#828179] hover:border-[#828179] py-4 px-8 rounded-xl"
+              rel="noopener noreferrer"
+            >
+              Download for Intel
+            </Link>
+          </div>
+
+          <div className="text-center text-sm text-zinc-500/80 tracking-wider">
+            No subscriptions. No in-app purchases.
+            <br />
+            macOS 10 or higher is recommended.
+          </div>
         </section>
 
-        <div className="text-center text-sm text-zinc-500/80 mt-2 font-light tracking-wider">
-          No subscriptions. No in-app purchases.
-          <br />
-          macOS 10 or higher is recommended.
-        </div>
-
-        <section className="rounded-2xl relative max-w-5xl mt-12 mb-20">
+        <section className="rounded-2xl relative max-w-5xl my-20">
           <div className="absolute inset-0 w-full h-8 bg-white/50 px-6 py-2 justify-between flex items-center text-xs font-medium">
             <svg
               viewBox="0 0 22 27"
@@ -91,7 +97,7 @@ export default function Home() {
         <section className="flex items-center justify-center tracking-wider w-full max-w-5xl border md:h-80 bg-[#F0EFEA] rounded-xl p-4 py-8 md:p-16 flex-col md:flex-row gap-8 md:gap-16">
           <div className="w-full flex-col flex items-center justify-center h-full">
             <div className="space-y-4">
-              <p className="text-lg md:text-xl">Always on Claude AI</p>
+              <p className="text-lg md:text-xl">Always on Claude</p>
               <p className="text-sm md:text-base">
                 Faster access to Claude. A customizable key combination opens
                 Claude from any screen on your desktop.
@@ -101,14 +107,14 @@ export default function Home() {
           <img src="/hotkey.png" alt="Hotkey" className="w-80" />
         </section>
 
-        <section className="flex items-center justify-center tracking-wider w-full max-w-5xl border md:h-80 bg-[#141413] text-[#F0EFEA] rounded-xl p-4 py-8 md:p-16 flex-col gap-8 mt-16">
+        <section className="flex items-center justify-center tracking-wider w-full max-w-5xl border md:h-80 bg-[#141413] text-[#F0EFEA] rounded-xl p-4 py-8 md:p-16 flex-col gap-10 mt-20">
           <h2 className="text-xl md:text-3xl font-medium font-serif text-center">
             Supercharge your workflow with AI on your desktop
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Link
-              href="https://github.com/patrick-pc/castgpt/releases/download/v0.4.5/Claude-0.4.5-arm64-mac.zip"
+              href={downloadAppleSilicon}
               className="bg-[#FAFAF8] hover:bg-[#FAFAF8]/80 text-[#141413] py-4 px-8 rounded-xl"
               rel="noopener noreferrer"
             >
@@ -116,7 +122,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="https://github.com/patrick-pc/castgpt/releases/download/v0.4.5/Claude-0.4.5-mac.zip"
+              href={downloadIntel}
               className="bg-[#141413] border border-[#FAFAF8] hover:text-[#FAFAF8]/80 hover:border-[#FAFAF8]/80 py-4 px-8 rounded-xl"
               rel="noopener noreferrer"
             >

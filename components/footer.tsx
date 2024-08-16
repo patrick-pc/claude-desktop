@@ -2,28 +2,30 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-center px-4">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full max-w-5xl py-16 border-t border-zinc-150">
+    <footer className="flex items-center justify-center px-6">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full max-w-5xl py-20 border-t border-zinc-150">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
-          <img
-            src="/patrick.png"
-            alt="Patrick Pascual"
-            className="h-10 w-10 rounded-full border border-zinc-150"
-          />
-          <p className="text-sm max-w-2xl">
+          <Link href="https://x.com/_patrickpc" target="_blank">
+            <img
+              src="/patrick.png"
+              alt="Patrick Pascual"
+              className="h-10 w-10 rounded-full border border-zinc-150"
+            />
+          </Link>
+          <p className="text-sm max-w-xl">
+            Originally developed for my own needs, I've now made this app
+            available to everyone. Please note that it's an independent project,
+            not affiliated with Anthropic.{" "}
             <span className="font-medium">
-              Made by{" "}
+              -{" "}
               <Link
                 href="https://x.com/_patrickpc"
                 target="_blank"
                 className="hover:underline"
               >
-                Patrick.
+                Patrick
               </Link>
             </span>{" "}
-            Originally developed for my own needs, I've now made this app
-            available to everyone. Please note that it's an independent project,
-            not affiliated with Anthropic.
           </p>
         </div>
 
