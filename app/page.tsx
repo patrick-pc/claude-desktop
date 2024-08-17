@@ -56,8 +56,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="rounded-2xl relative max-w-5xl my-20">
-          <div className="absolute inset-0 w-full h-8 bg-white/50 px-6 py-2 justify-between flex items-center text-xs font-medium">
+        <section className="rounded-2xl relative max-w-5xl my-10 mt-20 md:my-20">
+          <div className="absolute inset-0 w-full h-8 bg-white/50 px-4 md:px-6 py-2 justify-between flex items-center text-xs font-medium">
             <svg
               viewBox="0 0 22 27"
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ export default function Home() {
               ></path>
             </svg>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <svg
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
