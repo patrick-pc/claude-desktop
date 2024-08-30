@@ -1,10 +1,11 @@
 "use client";
 
+import * as seline from "@seline-analytics/web";
 import Footer from "@/components/footer";
+import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
 import Nav from "@/components/nav";
-import * as seline from "@seline-analytics/web";
 
 const downloadAppleSilicon =
   process.env.NEXT_PUBLIC_DOWNLOAD_APPLE_SILICON || "";
@@ -84,12 +85,23 @@ export default function Home() {
             </div>
           </div>
 
-          <img src="/hero.png" alt="Claude" className="w-full rounded-2xl" />
+          <Image
+            src="/hero.webp"
+            alt="Claude"
+            width={1920}
+            height={1080}
+            className="w-full rounded-2xl"
+            priority
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+          />
 
           <div className="absolute inset-x-0 bottom-0 flex justify-center">
-            <img
-              src="/icon.png"
+            <Image
+              src="/icon.webp"
               alt="Desktop Icon"
+              width={160}
+              height={160}
               className="size-20 md:size-40 md:-mb-20 -mb-10"
             />
           </div>
@@ -102,7 +114,7 @@ export default function Home() {
         </section>
 
         <section className="flex items-center justify-center tracking-wider w-full max-w-5xl border md:h-80 bg-[#F0EFEA] rounded-xl p-4 py-8 md:p-16 flex-col md:flex-row gap-8 md:gap-16">
-          <div className="w-full flex-col flex items-center justify-center h-full">
+          <div className="w-full flex-col flex items-center justify-center h-full max-w-lg">
             <div className="space-y-4">
               <p className="text-lg md:text-xl">Always on Claude</p>
               <p className="text-sm md:text-base">
@@ -111,7 +123,13 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <img src="/hotkey.png" alt="Hotkey" className="w-80" />
+          <Image
+            src="/hotkey.webp"
+            alt="Hotkey"
+            width={320}
+            height={320}
+            className="w-80"
+          />
         </section>
 
         <section className="flex items-center justify-center tracking-wider w-full max-w-5xl border md:h-80 bg-[#141413] text-[#F0EFEA] rounded-xl p-4 py-8 md:p-16 flex-col gap-10 mt-20">
